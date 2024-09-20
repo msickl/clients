@@ -81,7 +81,7 @@ export class AccountComponent implements OnInit, OnDestroy {
   ) {}
 
   async ngOnInit() {
-    this.selfHosted = this.platformUtilsService.isSelfHost();
+    this.selfHosted = false;
 
     this.route.params
       .pipe(
