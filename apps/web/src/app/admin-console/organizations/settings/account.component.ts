@@ -176,6 +176,7 @@ export class AccountComponent implements OnInit, OnDestroy {
   };
 
   submitCollectionManagement = async () => {
+    return;
     // Early exit if self-hosted
     if (this.selfHosted) {
       return;
