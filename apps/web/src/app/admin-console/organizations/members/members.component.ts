@@ -188,12 +188,8 @@ export class MembersComponent extends BaseMembersComponent<OrganizationUserView>
             .find((p) => p.organizationId === this.organization.id);
           this.orgResetPasswordPolicyEnabled = resetPasswordPolicy?.enabled;
 
-          const billingMetadata = await this.billingApiService.getOrganizationBillingMetadata(
-            this.organization.id,
-          );
-
-          this.orgIsOnSecretsManagerStandalone = billingMetadata.isOnSecretsManagerStandalone;
-
+          this.orgIsOnSecretsManagerStandalone = false;
+          
           await this.load();
 
           this.searchControl.setValue(qParams.search);
