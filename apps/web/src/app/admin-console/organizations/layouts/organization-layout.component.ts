@@ -137,6 +137,7 @@ export class OrganizationLayoutComponent implements OnInit, OnDestroy {
   }
 
   canShowBillingTab(organization: Organization): boolean {
+    return false;
     return canAccessBillingTab(organization);
   }
 
